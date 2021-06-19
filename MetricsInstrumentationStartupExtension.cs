@@ -72,7 +72,7 @@ namespace thZero.AspNetCore
             builder.AddMetrics();
         }
 
-        protected void ConfigureInitializeMetrics(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory, IServiceProvider svp)
+        protected virtual void ConfigureInitializeMetrics(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory, IServiceProvider svp)
         {
             app.UseMetricsAllMiddleware();
             // app.UseMetricsActiveRequestMiddleware();
